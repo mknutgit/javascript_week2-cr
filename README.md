@@ -39,7 +39,17 @@ Clone this repo on to your desktop, make sure that you have node.js installed on
 npm install
 bower install
 ```
-* Once they are finished installing successfully, enter the commands:
+* Once they are finished installing successfully install globals if necessary:
+```shell
+- (gulp, bower, sass, typescript, typescript packages.)
+  - npm install gulp -g
+  - npm install bower -g
+  - gem install sass
+  - npm install typescript -g
+  - apm install atom-typescript
+```
+
+* Finally, enter the commands:
 ```shell
 gulp build --production
 gulp serve
