@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
     <div class="container">
       <div class="jumbotron">
         <h1>Meal Tracker</h1>
-         <p>Go ahead, track your meals and calorie counts!</p>
+         <h4>Go ahead, track your meals and calorie counts!</h4>
       </div>
       <div class="container">
         <meal-list [mealList]="meals" (onMealSelect)="mealWasSelected($event)">
@@ -32,6 +32,6 @@ export class AppComponent {
   }
 
   mealWasSelected(clickedMeal: Meal): void {
-
+    console.log('parent', clickedMeal);
   }
 }

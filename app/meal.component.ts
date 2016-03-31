@@ -5,7 +5,7 @@ import { Meal } from './meal.model'
   selector: 'meal-display',
   inputs: ['meal'],
   template: `
-  <h2>{{ meal.name }}</h2>
+  <h3>{{ meal.name }}</h3>
   `
 })
 
