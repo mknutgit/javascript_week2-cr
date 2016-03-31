@@ -4,7 +4,14 @@ import { Component } from 'angular2/core';
   selector: 'my-app',
   template: `
     <div class="container">
-      <h1>Meal Tracker</h1>
+      <div class="jumbotron">
+        <h1>Meal Tracker</h1>
+         <p>Go ahead, track your meals and calorie counts!</p>
+      </div>
+
+      <meal-list [meals]="meals"></meal-list>
+
+    </div>
   `
 })
 
