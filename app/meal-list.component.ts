@@ -3,11 +3,13 @@ import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
 import { NewMealComponent } from './new-meal.component';
 import { EditMealDetailsComponent } from './edit-meal-details.component';
+import { HealtyPipe } from './healthy.pipe.ts'
 
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
   outputs: ['onMealSelect'],
+  pipes: [HealthyPipe],
   directives: [MealComponent, NewMealComponent, EditMealDetailsComponent],
   template: `
 
@@ -19,9 +21,9 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
       <h2>Meals:</h2>
       <div>
         <select (change)="onChange($event.target.value)" class="filter">
-          <option value="all">Show All</option>
-          <option value="healthy">Show Healty</option>
-          <option value="notHealthy" selected="selected">Show unhealthy</option>
+          <option value="All" selected="selected">Show All</option>
+          <option value="Healthy">Show Healthy</option>
+          <option value="Unhealthy" selected="selected">Show unhealthy</option>
         </select>
         <meal-display *ngFor="#currentMeal of mealList"
           (click)="mealClicked(currentMeal)"
