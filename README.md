@@ -52,7 +52,6 @@ gulp serve
 * CSS
 * SCSS
 * JavaScript
-* jQuery
 * Node.js
 * bower
 * npm
