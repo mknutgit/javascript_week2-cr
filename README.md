@@ -1,4 +1,4 @@
-Use Ctrl + Shift + M to generate a readme preview in ATOM.
+Use Ctrl + Shift + M to generate a readme preview in Atom if using a mac.
 
 # Angular 2 Basics independent project
 
