@@ -1,20 +1,21 @@
 import { Pipe, PipeTransform } from 'angular2/core';
-import { Task } from './meal.model';
+import { Meal } from './meal.model';
 
-@pipe({
+@Pipe({
+  name: "healthy",
 
 })
 export class HealthyPipe implements PipeTransform {
   transform(input: Meal[], args) {
     var isHealthy = args[0];
-    if (isHealthy === "All") {
+    if (isHealthy === "all") {
       return input;
-    } else if (isHealthy === "Healthy") {
-      return input.filter(meal) => {
+    } else if (isHealthy === "healthy") {
+      return input.filter((meal) => {
         return meal.calories <= 300;
       });
-    } else if (isHealthy === "Unhealthy") {
-      return input.filter(meal) => {
+    } else if (isHealthy === "unhealthy") {
+      return input.filter((meal) => {
         return meal.calories > 300;
       });
     } else {

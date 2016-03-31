@@ -27,7 +27,7 @@ export class AppComponent {
       new Meal("Shaved Ice", "Yummy", 350),
       new Meal("Gelato", "Yummy", 450),
       new Meal("Broccoli", "No so yummy", 250),
-      new Meal("Collard Greens", "not so yummy", 350),
+      new Meal("Collard Greens", "not so yummy", 300),
     ];
   }
 
