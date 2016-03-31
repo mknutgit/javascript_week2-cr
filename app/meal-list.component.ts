@@ -2,12 +2,13 @@ import { Component, EventEmitter } from 'angular2/core';
 import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
 import { NewMealComponent } from './new-meal.component';
+import { EditMealDetailsComponent } from './edit-meal-details.component';
 
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
   outputs: ['onMealSelect'],
-  directives: [MealComponent, NewMealComponent],
+  directives: [MealComponent, NewMealComponent, EditMealDetailsComponent],
   template: `
 
 
@@ -17,12 +18,20 @@ import { NewMealComponent } from './new-meal.component';
       <hr>
       <h2>Meals:</h2>
       <div>
+        <select (change)="onChange($event.target.value)" class="filter">
+          <option value="all">Show All</option>
+          <option value="healthy">Show Healty</option>
+          <option value="notHealthy" selected="selected">Show unhealthy</option>
+        </select>
         <meal-display *ngFor="#currentMeal of mealList"
           (click)="mealClicked(currentMeal)"
           [class.selected]="currentMeal === selectedMeal"
           [meal]="currentMeal">
         </meal-display>
       </div>
+      <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
+      </edit-meal-details>
+
 
 
   `
