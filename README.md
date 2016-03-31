@@ -47,6 +47,7 @@ gulp serve
 * Enjoy the website!
 
 ### Technologies Used
+* Angular2
 * HTML
 * CSS
 * SCSS
@@ -56,8 +57,6 @@ gulp serve
 * bower
 * npm
 * Gulp
-* JSHint
-* Browserify
 * Bootstrap v3.3.6
 
 ###Copyright & Licensing
