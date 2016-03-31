@@ -1,19 +1,19 @@
-Use Ctrl + Shift + M to generate a readme preview. 
+Use Ctrl + Shift + M to generate a readme preview in ATOM.
 
 # Angular 2 Basics independent project
 
 ## JavaScript, Week 2 objectives:
 
-Does the website work as expected?
-Is the app structured in a logical way, including a model, multiple components and TypeScript syntax? Interfaces are not a requirement for this assignment.
-Does the app allow you to create and edit new instances of a model?
-Does the app allow you to view a list of foods names and then see the other properties in a details view on click?
-Does the app allow you to filter foods based on their calories?
-Do you manage your build tool dependencies with npm?
-Do you manage your front-end dependencies with Bower?
-Does the app include a gulp-based asset pipeline with a development server? Does the asset pipeline include all tasks from the homework this week?
-Does the code stick to standards from previous weeks? (Testing is not required this week.)
-Are you able to discuss the flow of your code and the concepts behind it with an instructor using correct terminology?
+* Does the website work as expected?
+* Is the app structured in a logical way, including a model, multiple components and TypeScript syntax? Interfaces are not a requirement for this assignment.
+* Does the app allow you to create and edit new instances of a model?
+* Does the app allow you to view a list of foods names and then see the other properties in a details view on click?
+* Does the app allow you to filter foods based on their calories?
+* Do you manage your build tool dependencies with npm?
+* Do you manage your front-end dependencies with Bower?
+* Does the app include a gulp-based asset pipeline with a development server? Does the asset pipeline include all tasks from the homework this week?
+* Does the code stick to standards from previous weeks? (Testing is not required this week.)
+* Are you able to discuss the flow of your code and the concepts behind it with an instructor using correct terminology?
 
 ### By: Matt Knutson
 
