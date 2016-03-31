@@ -20,8 +20,8 @@ import { HealthyPipe } from './healthy.pipe'
       <div>
         <select (change)="onChange($event.target.value)" class="filter">
           <option value="all" selected="selected">Show All</option>
-          <option value="healthy">Show Healthy</option>
-          <option value="unhealthy">Show Unhealthy</option>
+          <option value="healthy">Show Healthy < 300 cal</option>
+          <option value="unhealthy">Show Unhealthy > 300 cal</option>
         </select>
         <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
           (click)="mealClicked(currentMeal)"
