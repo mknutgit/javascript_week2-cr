@@ -5,24 +5,26 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
-  outputs: ['onTaskSelect'],
-  directives: [MealComponent]
+  outputs: ['onMealSelect'],
+  directives: [MealComponent],
   template: `
-  <h2 *ngFor="#currentMeal of mealList" (click)="mealClicked(currentMeal)">
-    {{currentMeal.name}}
-  </h2>
+  <meal-display *ngFor="#currentMeal of mealList"
+    (click)="mealClicked(currentMeal)"
+    [class.selected]="currentMeal === selectedMeal"
+    [meal]="currentMeal">
+  </meal-display>
   `
 })
-
-Export class MealListComponent {
+export class MealListComponent {
   public mealList: Meal[];
-  public onMealSelect: EventEmitter<meal>;
+  public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
   constructor() {
-    this.onMealSelect = new EvenEmitter();
+    this.onMealSelect = new EventEmitter();
   }
   mealClicked(clickedMeal: Meal): void {
-    this.selectedMeal = clickeMeal;
+    console.log('child', clickedMeal);
+    this.selectedMeal = clickedMeal;
     this.onMealSelect.emit(clickedMeal);
   }
 }

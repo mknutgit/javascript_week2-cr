@@ -1,4 +1,6 @@
-import { Component } from 'angular2/core';
+import { Component, EventEmitter } from 'angular2/core';
+import { MealListComponent} from './meal-list.component';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'my-app',
@@ -9,9 +11,10 @@ import { Component } from 'angular2/core';
         <h1>Meal Tracker</h1>
          <p>Go ahead, track your meals and calorie counts!</p>
       </div>
-
-      <meal-list [mealList]="meals" (onMealSelect)="taskWasSelected($event)">
-      </meal-list>
+      <div class="container">
+        <meal-list [mealList]="meals" (onMealSelect)="mealWasSelected($event)">
+        </meal-list>
+      </div>
 
     </div>
   `
