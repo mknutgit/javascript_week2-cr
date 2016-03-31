@@ -24,7 +24,7 @@ As a user you can:
 1. Log a food by submitting a form with its name, calories and details.
 2. View a list of only the names of the foods logged, and click on a name to view the details and calories for that food.
 3. View either all foods, only unhealthy foods that are more than 300 calories, or only healthy foods that are less than 300 calories.
-4. Click on a food and then edit its name, details or calories in case I decide to pretend my fries were only 100 calories instead of 365 calories.
+4. Click on a food and then edit its name, details or calories.
 
 ### Known Bugs
 

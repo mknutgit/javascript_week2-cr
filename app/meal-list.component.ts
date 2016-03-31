@@ -12,8 +12,6 @@ import { HealthyPipe } from './healthy.pipe'
   pipes: [HealthyPipe],
   directives: [MealComponent, NewMealComponent, EditMealDetailsComponent],
   template: `
-
-
     <div class="row">
       <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
     </div>
@@ -33,9 +31,6 @@ import { HealthyPipe } from './healthy.pipe'
       </div>
       <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
       </edit-meal-details>
-
-
-
   `
 })
 export class MealListComponent {
