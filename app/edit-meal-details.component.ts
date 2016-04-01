@@ -5,9 +5,8 @@ import { Meal } from './meal.model';
   selector: 'edit-meal-details',
   inputs: ['meal'],
   template: `
-  <hr>
   <div class="meal-edit">
-    <h3>Meal Details: </h3>
+    <h2>Meal Details: </h2>
       <h4>* Edit below if necessary *</h4>
     <input [(ngModel)]="meal.name" class="col-sm-8 input-lg meal-form"/>
     <input [(ngModel)]="meal.notes" class="col-sm-8 input-lg meal-form"/>
